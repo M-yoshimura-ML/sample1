@@ -28,6 +28,11 @@ Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::get('/micromodal', function () {
+    return view('micromodal');
+})->middleware(['auth', 'verified'])->name('micromodal');
+
+
 Route::get('/contact-us', function () {
     return Inertia::render('ContactUs');
 })->middleware(['auth', 'verified'])->name('contact-us');
